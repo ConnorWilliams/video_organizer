@@ -1,0 +1,390 @@
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/exceptions.py", line 43, in handle_exception
+    if environments.Setting().is_verbose() or not issubclass(exc_type, ClickException):
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
+
+Original exception was:
+Traceback (most recent call last):
+  File "/opt/homebrew/bin/pipenv", line 8, in <module>
+    sys.exit(cli())
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 52, in main
+    return super().main(*args, **kwargs, windows_expand_args=False)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1077, in main
+    with self.make_context(prog_name, args, **extra) as ctx:
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 943, in make_context
+    self.parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1644, in parse_args
+    rest = super().parse_args(ctx, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 1408, in parse_args
+    value, args = param.handle_parse_result(ctx, opts, args)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2400, in handle_parse_result
+    value = self.process_value(ctx, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 2362, in process_value
+    value = self.callback(ctx, self, value)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 328, in callback
+    state = ctx.ensure_object(State)
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/vendor/click/core.py", line 643, in ensure_object
+    self.obj = rv = object_type()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/cli/options.py", line 65, in __init__
+    self.project = Project()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/project.py", line 160, in __init__
+    self.s = Setting()
+  File "/opt/homebrew/lib/python3.10/site-packages/pipenv/environments.py", line 239, in __init__
+    raise RuntimeError("Given PIPENV_PIPFILE is not found!")
+RuntimeError: Given PIPENV_PIPFILE is not found!
