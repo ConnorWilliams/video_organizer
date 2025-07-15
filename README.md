@@ -1,160 +1,196 @@
 # Skydiving Video Organizer
 
-This tool automatically organizes skydiving videos from GoPro and Insta360 cameras. It monitors a specified directory for new videos, organizes them by date, and groups them into jumps based on recording time.
+A desktop application for automatically organizing skydiving videos from GoPro, Insta360, and other action cameras. Organizes videos by date and groups them into jumps based on recording time.
 
 ## Features
 
-- Automatically monitors for new videos
-- Organizes videos into date-based folders
-- Groups videos from the same jump (recorded within 20 minutes of each other)
-- Prevents duplicate files using file hashing
-- Runs automatically in the background
-- Logs all operations for monitoring
+- **🎯 Smart Video Organization**: Automatically organizes videos into date-based folders
+- **🪂 Jump Detection**: Groups videos from the same jump (recorded within configurable time threshold)
+- **📱 Modern GUI**: User-friendly interface with real-time progress monitoring
+- **🔍 Duplicate Prevention**: Uses file hashing to prevent duplicate files
+- **📝 Detailed Logging**: Comprehensive logging for monitoring and troubleshooting
+- **⚙️ Configurable**: Customize video extensions, jump time thresholds, and naming preferences
 
-## Prerequisites
+- **💾 Name Preservation**: Option to preserve original video names
 
-- macOS
-- Python 3.11 or later
-- pipenv
-- fswatch (installed via Homebrew)
+## Screenshots
 
-## Installation
+*[Screenshots will be added here]*
 
-1. Install required tools:
+## Download
+
+### Latest Release
+Download the latest version from [GitHub Releases](https://github.com/yourusername/skydiving-video-organizer/releases)
+
+### System Requirements
+- **macOS**: 10.15 (Catalina) or later
+- **Windows**: Windows 10 or later (coming soon)
+- **Storage**: At least 1GB free space for the application
+
+## Quick Start
+
+### Option 1: Download Pre-built App (Recommended)
+1. Download the latest release from GitHub
+2. Extract the ZIP file
+3. Drag `Skydiving Video Organizer.app` to your Applications folder
+4. Right-click the app and select "Open" (first time only)
+5. Select your source directory and click "Organize Videos"
+
+### Option 2: Build from Source
 ```bash
-# Install Homebrew if you haven't already
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Clone the repository
+git clone https://github.com/yourusername/skydiving-video-organizer.git
+cd skydiving-video-organizer
 
-# Install fswatch
-brew install fswatch
-
-# Install pipenv if you haven't already
+# Install dependencies
 pip install pipenv
-```
-
-2. Clone or download this repository:
-```bash
-cd /Users/connor/Skydiving
-git clone <repository-url> video_organiser
-cd video_organiser
-```
-
-3. Install Python dependencies:
-```bash
 pipenv install
+
+# Build the application
+./build_app.sh
 ```
 
-4. Make the watch script executable:
+### Option 3: Command Line Only
 ```bash
-chmod +x watch_videos.sh
-```
+# Clone the repository
+git clone https://github.com/yourusername/skydiving-video-organizer.git
+cd skydiving-video-organizer
 
-5. Install the Launch Agent:
-```bash
-# Copy the Launch Agent configuration
-cp com.skydiving.video-organizer.plist ~/Library/LaunchAgents/
+# Install dependencies
+pip install pipenv
+pipenv install
 
-# Load the Launch Agent
-launchctl load ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
+# Run directly
+pipenv run python organize_videos.py
 ```
 
 ## Usage
 
-### Automatic Organization
+### GUI Application
+1. **Launch the app** from your Applications folder
+2. **Select source directory** containing your skydiving videos
+3. **Configure settings**:
+   - Video extensions (default: .mp4, .mov, .MP4, .MOV)
+   - Jump time threshold (default: 20 minutes)
+   - Preserve original names (optional)
+4. **Click "Organize Videos"** to start processing
+5. **Monitor progress** in the log output
 
-Once installed, the tool will automatically:
-1. Monitor `/Volumes/Connor SSD/Skydiving` for new videos
-2. When new videos are detected:
-   - Wait 5 seconds for file operations to complete
-   - Create date-based folders (YYYY-MM-DD)
-   - Group videos from the same jump (within 20 minutes)
-   - Rename files with format: `Jump X - Video Y - HH-MM.ext`
-   - Move files to appropriate folders
 
-### Manual Organization
 
-To manually organize videos:
-```bash
-cd /Users/connor/Skydiving/video_organiser
-pipenv run python organize_videos.py
+## File Organization
+
+Videos are organized into a structured hierarchy:
+
 ```
-
-### Monitoring
-
-- Check the logs for operation details:
-  ```bash
-  cat output.log  # Normal operation logs
-  cat error.log   # Error logs
-  ```
-
-### Managing the Background Service
-
-To stop the automatic monitoring:
-```bash
-launchctl unload ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
-```
-
-To start it again:
-```bash
-launchctl load ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
-```
-
-To check if the service is running:
-```bash
-launchctl list | grep video-organizer
-```
-
-### File Organization
-
-Videos are organized as follows:
-```
-/Volumes/Connor SSD/Skydiving/
+Source Directory/
 └── organized/
     └── YYYY-MM-DD/
-        ├── Jump 1 - Video 1 - HH-MM.mp4
-        ├── Jump 1 - Video 2 - HH-MM.mp4
-        ├── Jump 2 - Video 1 - HH-MM.mp4
+        ├── Jump 1 - Video 1 - HH-MM (original_name).mp4
+        ├── Jump 1 - Video 2 - HH-MM (original_name).mp4
+        ├── Jump 2 - Video 1 - HH-MM (original_name).mp4
         └── ...
 ```
 
+### Naming Convention
+- **Date folders**: `YYYY-MM-DD` format
+- **Jump grouping**: Videos recorded within the time threshold are grouped as the same jump
+- **Video numbering**: Sequential numbering within each jump
+- **Time stamp**: Recording time in HH-MM format
+- **Original name**: Preserved in parentheses (optional)
+
+## Configuration
+
+### Video Extensions
+Supported formats: `.mp4`, `.mov`, `.MP4`, `.MOV`
+Add more extensions in the GUI.
+
+### Jump Time Threshold
+Default: 20 minutes
+Videos recorded within this time window are considered part of the same jump.
+
+### Name Preservation
+When enabled, original filenames are preserved in parentheses:
+- `Jump 1 - Video 1 - 14-30 (GOPR1234).mp4`
+- `Jump 1 - Video 1 - 14-30 (My awesome skydive).mp4`
+
+When disabled, clean names are used:
+- `Jump 1 - Video 1 - 14-30.mp4`
+
 ## Troubleshooting
 
-1. If videos aren't being organized:
-   - Check if the Launch Agent is running: `launchctl list | grep video-organizer`
-   - Check the error log: `cat error.log`
-   - Check the output log: `cat output.log`
-   - Ensure the source directory exists and is accessible
-   - Make sure your external drive is mounted at `/Volumes/Connor SSD/Skydiving`
+### Common Issues
 
-2. If you need to modify the source directory:
-   - Edit `organize_videos.py` and change the `SOURCE_DIR` constant
-   - Restart the Launch Agent:
-     ```bash
-     launchctl unload ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
-     launchctl load ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
-     ```
+**App won't open on macOS:**
+- Right-click the app and select "Open"
+- Go to System Preferences > Security & Privacy and allow the app
 
-3. If the script is running in a loop:
-   - Stop the service: `launchctl unload ~/Library/LaunchAgents/com.skydiving.video-organizer.plist`
-   - Check the logs for any errors
-   - Restart the service: `launchctl load ~/Library/LaunchAgents/com.skydiving.video-organizer.plist`
+**Videos not being organized:**
+- Check that the source directory exists and contains video files
+- Verify video file extensions are supported
+- Check the log output for error messages
 
-## Uninstallation
+**Wrong dates detected:**
+- The app uses file creation/modification times
+- For GoPro files with incorrect timestamps, the app will prompt for manual correction
 
-To completely remove the tool:
+**Duplicate files:**
+- The app uses file hashing to prevent duplicates
+- Check the log for "already exists" messages
+
+## Development
+
+### Building from Source
 ```bash
-# Stop and remove the Launch Agent
-launchctl unload ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
-rm ~/Library/LaunchAgents/com.skydiving.video-organizer.plist
+# Install dependencies
+pipenv install
 
-# Remove the tool directory
-rm -rf /Users/connor/Skydiving/video_organiser
+# Run tests
+pipenv run python test_gui.py
+
+# Build application
+./build_app.sh
 ```
 
-## Notes
+### Project Structure
+```
+skydiving-video-organizer/
+├── video_organizer_gui.py    # Main GUI application
+├── organize_videos.py        # Core organization logic
+├── build_app.sh             # Build script
+├── video_organizer.spec     # PyInstaller specification
+├── Pipfile                  # Python dependencies
+└── README.md               # This file
+```
 
-- The script ignores the "organized" directory to prevent infinite loops
-- There's a 5-second cooldown period after detecting changes to ensure all file operations are complete
-- Videos are grouped into jumps if they were recorded within 20 minutes of each other
-- The script uses file hashing to prevent duplicate files
-- All operations are logged to `output.log` and `error.log` 
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+- **Issues**: Report bugs and request features on [GitHub Issues](https://github.com/yourusername/skydiving-video-organizer/issues)
+- **Discussions**: Join the conversation on [GitHub Discussions](https://github.com/yourusername/skydiving-video-organizer/discussions)
+
+## Changelog
+
+### v1.0.0
+- Initial release
+- GUI application with modern interface
+- Automatic video organization by date
+- Jump detection and grouping
+- Configurable settings
+- Name preservation option
+- Comprehensive logging
+
+---
+
+**Made with ❤️ for the skydiving community** 
