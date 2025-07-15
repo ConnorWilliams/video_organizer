@@ -10,7 +10,6 @@ A desktop application for automatically organizing skydiving videos from GoPro, 
 - **🔍 Duplicate Prevention**: Uses file hashing to prevent duplicate files
 - **📝 Detailed Logging**: Comprehensive logging for monitoring and troubleshooting
 - **⚙️ Configurable**: Customize video extensions, jump time thresholds, and naming preferences
-
 - **💾 Name Preservation**: Option to preserve original video names
 
 ## Screenshots
@@ -24,7 +23,7 @@ Download the latest version from [GitHub Releases](https://github.com/youruserna
 
 ### System Requirements
 - **macOS**: 10.15 (Catalina) or later
-- **Windows**: Windows 10 or later (coming soon)
+- **Windows**: Windows 10 or later
 - **Storage**: At least 1GB free space for the application
 
 ## Quick Start
@@ -32,11 +31,13 @@ Download the latest version from [GitHub Releases](https://github.com/youruserna
 ### Option 1: Download Pre-built App (Recommended)
 1. Download the latest release from GitHub
 2. Extract the ZIP file
-3. Drag `Skydiving Video Organizer.app` to your Applications folder
+3. Drag `Skydiving Video Organizer.app` to your Applications folder (macOS)
 4. Right-click the app and select "Open" (first time only)
 5. Select your source directory and click "Organize Videos"
 
 ### Option 2: Build from Source
+
+#### macOS Build
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/skydiving-video-organizer.git
@@ -46,11 +47,11 @@ cd skydiving-video-organizer
 pip install pipenv
 pipenv install
 
-# Build the application
+# Build macOS application
 ./build_app.sh
 ```
 
-### Option 3: Command Line Only
+#### Source Only (Cross-platform, for developers)
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/skydiving-video-organizer.git
@@ -64,6 +65,8 @@ pipenv install
 pipenv run python organize_videos.py
 ```
 
+> **Note:** Windows users should download the pre-built Windows release from GitHub Releases. Local Windows builds are not supported from macOS.
+
 ## Usage
 
 ### GUI Application
@@ -75,8 +78,6 @@ pipenv run python organize_videos.py
    - Preserve original names (optional)
 4. **Click "Organize Videos"** to start processing
 5. **Monitor progress** in the log output
-
-
 
 ## File Organization
 
@@ -145,8 +146,8 @@ When disabled, clean names are used:
 # Install dependencies
 pipenv install
 
-# Run tests
-pipenv run python test_gui.py
+# Run tests (GUI tests must be run locally)
+# pipenv run python test_gui.py
 
 # Build application
 ./build_app.sh
